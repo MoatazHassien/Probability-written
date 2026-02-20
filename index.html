@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Probability Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .arabic-explanation {
+            direction: rtl;
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+        .answer-box {
+            display: none;
+            animation: slideDown 0.4s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-indigo-800 mb-4">Probability Final Revision (Written)</h1>
+            <p class="text-gray-600 text-lg">5 Comprehensive Problems | 50 Sub-questions | Full Explanations</p>
+            <div class="mt-4 inline-block bg-white px-6 py-2 rounded-full shadow-sm border border-indigo-100 text-indigo-600 font-semibold">
+                Perfect for Chapter 1 & 2 Exam Prep
+            </div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="bg-white rounded-2xl shadow-md mb-8 overflow-hidden border border-gray-100">
+            <div class="bg-indigo-600 px-6 py-4 text-white">
+                <h2 class="text-xl font-bold">Problem 1: The Rolling Die & Number Theory</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-700 mb-6 leading-relaxed bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-400">
+                    <strong>Scenario:</strong> A fair 6-sided die is rolled once. Let <strong>S</strong> be the sample space. 
+                    Let <strong>A</strong> be the event of getting a prime number, 
+                    <strong>B</strong> be the event of getting an even number, 
+                    and <strong>C</strong> be the event of getting a number greater than 4.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="space-y-2">
+                        <p>1. List the elements of S and find n(S).</p>
+                        <p>2. List elements of A, B, and C.</p>
+                        <p>3. Find P(A), P(B), and P(C).</p>
+                        <p>4. Find P(A ∩ B).</p>
+                        <p>5. Find P(A ∪ B).</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>6. Are A and B mutually exclusive? Why?</p>
+                        <p>7. Find P(A | C).</p>
+                        <p>8. Are A and C independent?</p>
+                        <p>9. Find P(B ∩ C').</p>
+                        <p>10. Find P(A ∪ B ∪ C).</p>
+                    </div>
+                </div>
+
+                <button onclick="toggleAnswer('ans1')" class="bg-indigo-100 text-indigo-700 px-6 py-2 rounded-lg font-bold hover:bg-indigo-200 transition">Show Model Answer & Arabic Explanation</button>
+                
+                <div id="ans1" class="answer-box mt-6 p-6 bg-green-50 rounded-xl border border-green-200">
+                    <h4 class="font-bold text-green-800 mb-3">Model Answer:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>1. S={1,2,3,4,5,6}, n(S)=6</li>
+                            <li>2. A={2,3,5}, B={2,4,6}, C={5,6}</li>
+                            <li>3. P(A)=3/6=0.5, P(B)=3/6=0.5, P(C)=2/6=1/3</li>
+                            <li>4. A∩B={2} -> P(A∩B)=1/6</li>
+                            <li>5. P(A∪B) = 0.5 + 0.5 - 1/6 = 5/6</li>
+                        </ul>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>6. No, A∩B={2} ≠ ∅ (Not disjoint)</li>
+                            <li>7. P(A∩C)={5}=1/6. P(A|C)=(1/6)/(1/3)=0.5</li>
+                            <li>8. Check P(A∩C)=1/6 vs P(A)P(C)=0.5*(1/3)=1/6. Yes, Independent.</li>
+                            <li>9. B∩C' = {2,4,6} ∩ {1,2,3,4} = {2,4} -> P=2/6=1/3</li>
+                            <li>10. A∪B∪C = {2,3,4,5,6} -> P=5/6</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-explanation mt-4 pt-4 border-t border-green-200 text-gray-700">
+                        <strong>الشرح بالعربي:</strong><br>
+                        الرقم 1 ليس أولياً، لذا A تضم {2,3,5}. الأحداث المتنافية لازم يكون تقاطعها فاي، وهنا عندنا الـ 2 مشترك فبالتالي مش متنافيين. عشان نثبت الاستقلال بنضرب الاحتمالات المنفردة لو ساوت التقاطع يبقى مستقلين.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-white rounded-2xl shadow-md mb-8 overflow-hidden border border-gray-100">
+            <div class="bg-blue-600 px-6 py-4 text-white">
+                <h2 class="text-xl font-bold">Problem 2: Conditional Probability in Production</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-700 mb-6 leading-relaxed bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400">
+                    <strong>Scenario:</strong> A factory has two machines. Machine 1 (M1) produces 60% of items, Machine 2 (M2) produces 40%. 
+                    5% of M1's items are defective (D), while 10% of M2's items are defective.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="space-y-2">
+                        <p>1. Define P(M1) and P(M2).</p>
+                        <p>2. Define P(D | M1) and P(D | M2).</p>
+                        <p>3. Find P(M1 ∩ D).</p>
+                        <p>4. Find P(M2 ∩ D).</p>
+                        <p>5. Find the total probability P(D).</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>6. Find P(D').</p>
+                        <p>7. If an item is defective, what is the probability it came from M1? P(M1 | D).</p>
+                        <p>8. Find P(M2 | D).</p>
+                        <p>9. Are "Being Defective" and "Machine 1" independent?</p>
+                        <p>10. What is P(M1 ∪ D)?</p>
+                    </div>
+                </div>
+
+                <button onclick="toggleAnswer('ans2')" class="bg-blue-100 text-blue-700 px-6 py-2 rounded-lg font-bold hover:bg-blue-200 transition">Show Model Answer & Arabic Explanation</button>
+                
+                <div id="ans2" class="answer-box mt-6 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                    <h4 class="font-bold text-blue-800 mb-3">Model Answer:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>1. P(M1)=0.6, P(M2)=0.4</li>
+                            <li>2. P(D|M1)=0.05, P(D|M2)=0.10</li>
+                            <li>3. P(M1∩D) = 0.6 * 0.05 = 0.03</li>
+                            <li>4. P(M2∩D) = 0.4 * 0.10 = 0.04</li>
+                            <li>5. P(D) = 0.03 + 0.04 = 0.07</li>
+                        </ul>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>6. P(D') = 1 - 0.07 = 0.93</li>
+                            <li>7. P(M1|D) = 0.03 / 0.07 = 3/7 ≈ 0.428</li>
+                            <li>8. P(M2|D) = 0.04 / 0.07 = 4/7 ≈ 0.571</li>
+                            <li>9. No, P(D|M1) (0.05) ≠ P(D) (0.07).</li>
+                            <li>10. P(M1∪D) = 0.6 + 0.07 - 0.03 = 0.64</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-explanation mt-4 pt-4 border-t border-blue-200 text-gray-700">
+                        <strong>الشرح بالعربي:</strong><br>
+                        دي مسألة "Total Probability" و "Bayes Rule". بنجيب التقاطعات الأول بضرب الاحتمال الشرطي في احتمال الماكينة. عشان نجيب P(D) الكلية بنجمع التقاطعات. ولما يطلب احتمال الماكينة بشرط العيب (P(M1|D)) بنقسم الجزء على الكل.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3: Generic Rules -->
+        <div class="bg-white rounded-2xl shadow-md mb-8 overflow-hidden border border-gray-100">
+            <div class="bg-purple-600 px-6 py-4 text-white">
+                <h2 class="text-xl font-bold">Problem 3: Algebra of Events (Laws Only)</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-700 mb-6 leading-relaxed bg-gray-50 p-4 rounded-lg border-l-4 border-purple-400">
+                    <strong>Scenario:</strong> For two events A and B, we have P(A) = 0.5, P(B) = 0.6, and P(A ∩ B) = 0.2.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="space-y-2">
+                        <p>1. Find P(A ∪ B).</p>
+                        <p>2. Find P(A').</p>
+                        <p>3. Find P(A ∩ B').</p>
+                        <p>4. Find P(B ∩ A').</p>
+                        <p>5. Find P(A' ∩ B').</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>6. Find P(A' ∪ B').</p>
+                        <p>7. Find P(A | B).</p>
+                        <p>8. Find P(B | A).</p>
+                        <p>9. Find P(A' | B').</p>
+                        <p>10. Are A and B independent? Justify.</p>
+                    </div>
+                </div>
+
+                <button onclick="toggleAnswer('ans3')" class="bg-purple-100 text-purple-700 px-6 py-2 rounded-lg font-bold hover:bg-purple-200 transition">Show Model Answer & Arabic Explanation</button>
+                
+                <div id="ans3" class="answer-box mt-6 p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <h4 class="font-bold text-purple-800 mb-3">Model Answer:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>1. P(A∪B) = 0.5+0.6-0.2 = 0.9</li>
+                            <li>2. P(A') = 1-0.5 = 0.5</li>
+                            <li>3. P(A∩B') = P(A)-P(A∩B) = 0.5-0.2 = 0.3</li>
+                            <li>4. P(B∩A') = P(B)-P(A∩B) = 0.6-0.2 = 0.4</li>
+                            <li>5. P(A'∩B') = 1-P(A∪B) = 1-0.9 = 0.1 (De Morgan)</li>
+                        </ul>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>6. P(A'∪B') = 1-P(A∩B) = 1-0.2 = 0.8</li>
+                            <li>7. P(A|B) = 0.2 / 0.6 = 1/3 ≈ 0.33</li>
+                            <li>8. P(B|A) = 0.2 / 0.5 = 0.4</li>
+                            <li>9. P(A'|B') = P(A'∩B')/P(B') = 0.1 / 0.4 = 0.25</li>
+                            <li>10. P(A)P(B) = 0.5*0.6 = 0.3. Since 0.3 ≠ 0.2, they are Dependent.</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-explanation mt-4 pt-4 border-t border-purple-200 text-gray-700">
+                        <strong>الشرح بالعربي:</strong><br>
+                        دي تطبيق مباشر للقوانين. لاحظ قانون دي مورجان: (A'∩B') هو "واحد ناقص الاتحاد". وقانون الفرق (P(A∩B')) هو "الأول ناقص التقاطع". الاستقلال لازم حاصل الضرب يساوي التقاطع بالظبط.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem 4 & 5 follows same pattern... Adding 2 more -->
+        <!-- Question 4: Coins & Trees -->
+        <div class="bg-white rounded-2xl shadow-md mb-8 overflow-hidden border border-gray-100">
+            <div class="bg-green-600 px-6 py-4 text-white">
+                <h2 class="text-xl font-bold">Problem 4: Tossing a Coin 3 Times</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-700 mb-6 leading-relaxed bg-gray-50 p-4 rounded-lg border-l-4 border-green-400">
+                    <strong>Scenario:</strong> A fair coin is tossed 3 times. 
+                    Let <strong>E1</strong> = at least two heads, 
+                    <strong>E2</strong> = exactly one tail, 
+                    <strong>E3</strong> = the first toss is a head.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="space-y-2">
+                        <p>1. Find n(S).</p>
+                        <p>2. List elements of E1.</p>
+                        <p>3. List elements of E2.</p>
+                        <p>4. List elements of E3.</p>
+                        <p>5. Find P(E1) and P(E2).</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>6. Find E1 ∩ E2 and its probability.</p>
+                        <p>7. Find P(E1 | E3).</p>
+                        <p>8. Find P(E2 | E3).</p>
+                        <p>9. Are E2 and E3 independent?</p>
+                        <p>10. Find P(E1 ∪ E2).</p>
+                    </div>
+                </div>
+
+                <button onclick="toggleAnswer('ans4')" class="bg-green-100 text-green-700 px-6 py-2 rounded-lg font-bold hover:bg-green-200 transition">Show Model Answer & Arabic Explanation</button>
+                
+                <div id="ans4" class="answer-box mt-6 p-6 bg-green-50 rounded-xl border border-green-200">
+                    <h4 class="font-bold text-green-800 mb-3">Model Answer:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>1. n(S) = 2^3 = 8</li>
+                            <li>2. E1 = {HHH, HHT, HTH, THH}</li>
+                            <li>3. E2 = {HHT, HTH, THH} (Note: Exactly 1 T = 2 H)</li>
+                            <li>4. E3 = {HHH, HHT, HTH, HTT}</li>
+                            <li>5. P(E1)=4/8=0.5, P(E2)=3/8</li>
+                        </ul>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>6. E1∩E2 = {HHT, HTH, THH} -> P=3/8</li>
+                            <li>7. E1∩E3 = {HHH, HHT, HTH} -> P=3/8. P(E1|E3) = (3/8)/(4/8) = 0.75</li>
+                            <li>8. E2∩E3 = {HHT, HTH} -> P=2/8. P(E2|E3) = (2/8)/(4/8) = 0.5</li>
+                            <li>9. P(E2)P(E3) = (3/8)*(1/2) = 3/16. P(E2∩E3)=2/8=4/16. No, Dependent.</li>
+                            <li>10. P(E1∪E2) = 4/8 + 3/8 - 3/8 = 4/8 = 0.5</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-explanation mt-4 pt-4 border-t border-green-200 text-gray-700">
+                        <strong>الشرح بالعربي:</strong><br>
+                        هنا لازم نكتب فضاء العينة صح (8 نواتج). كلمة "At least 2 heads" يعني يا اتنين يا تلاتة. لاحظ إن E2 هي جزء من E1 (subset) لأن اللي عنده كتابه واحدة بالظبط أكيد عنده صورتين. عشان كدة الاتحاد طلع هو هو E1.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 5: Disjoint & Subsets -->
+        <div class="bg-white rounded-2xl shadow-md mb-8 overflow-hidden border border-gray-100">
+            <div class="bg-red-600 px-6 py-4 text-white">
+                <h2 class="text-xl font-bold">Problem 5: Special Relationships (Subset & Disjoint)</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-700 mb-6 leading-relaxed bg-gray-50 p-4 rounded-lg border-l-4 border-red-400">
+                    <strong>Scenario:</strong> Suppose A and B are events where P(A) = 0.3 and P(B) = 0.5. 
+                    Calculate the requested values for <strong>Two Different Cases</strong>.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="font-bold text-red-600">Case 1: A and B are Mutually Exclusive</div>
+                    <div class="font-bold text-red-600">Case 2: A is a Subset of B (A ⊂ B)</div>
+                    <div class="space-y-2">
+                        <p>1. Find P(A ∩ B) in Case 1.</p>
+                        <p>2. Find P(A ∪ B) in Case 1.</p>
+                        <p>3. Find P(A | B) in Case 1.</p>
+                        <p>4. Find P(A' ∩ B) in Case 1.</p>
+                        <p>5. Find P(A' ∩ B') in Case 1.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <p>6. Find P(A ∩ B) in Case 2.</p>
+                        <p>7. Find P(A ∪ B) in Case 2.</p>
+                        <p>8. Find P(B | A) in Case 2.</p>
+                        <p>9. Find P(A | B) in Case 2.</p>
+                        <p>10. Find P(B ∩ A') in Case 2.</p>
+                    </div>
+                </div>
+
+                <button onclick="toggleAnswer('ans5')" class="bg-red-100 text-red-700 px-6 py-2 rounded-lg font-bold hover:bg-red-200 transition">Show Model Answer & Arabic Explanation</button>
+                
+                <div id="ans5" class="answer-box mt-6 p-6 bg-red-50 rounded-xl border border-red-200">
+                    <h4 class="font-bold text-red-800 mb-3">Model Answer:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li class="font-bold">Case 1:</li>
+                            <li>1. P(A∩B) = 0 (Disjoint)</li>
+                            <li>2. P(A∪B) = 0.3 + 0.5 = 0.8</li>
+                            <li>3. P(A|B) = 0 / 0.5 = 0</li>
+                            <li>4. P(A'∩B) = P(B) - 0 = 0.5</li>
+                            <li>5. P(A'∩B') = 1 - 0.8 = 0.2</li>
+                        </ul>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li class="font-bold">Case 2:</li>
+                            <li>6. P(A∩B) = P(A) = 0.3</li>
+                            <li>7. P(A∪B) = P(B) = 0.5</li>
+                            <li>8. P(B|A) = 0.3 / 0.3 = 1</li>
+                            <li>9. P(A|B) = 0.3 / 0.5 = 0.6</li>
+                            <li>10. P(B∩A') = P(B) - P(A) = 0.5 - 0.3 = 0.2</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-explanation mt-4 pt-4 border-t border-red-200 text-gray-700">
+                        <strong>الشرح بالعربي:</strong><br>
+                        دي أهم مسألة في الامتحان! 
+                        <br>1- لو "Mutually Exclusive" يعني التقاطع بصفر فوراً.
+                        <br>2- لو "A subset of B" يعني الصغير جوه الكبير، يبقى التقاطع هو الصغير (A) والاتحاد هو الكبير (B). 
+                        لاحظ إن P(B|A) في حالة الـ subset دايما بـ 1 لأننا متأكدين إن لو الصغير حصل يبقى الكبير حصل بالتبعية.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'block') {
+                element.style.display = 'none';
+            } else {
+                element.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
